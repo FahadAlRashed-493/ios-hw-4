@@ -61,12 +61,12 @@ class ViewController: UIViewController {
        if counter % 2 == 0 {
              sender.setTitle("X", for: .normal)
         sender.setTitleColor(.green, for: .normal)
-                 turnLabel.text = "X TURN"
+                 turnLabel.text = " O TURN"
              }
              else {
                  sender.setTitle("O", for: .normal)
         sender.setTitleColor(.red, for: .normal)
-                 turnLabel.text = "OTURN"
+                 turnLabel.text = "X TURN"
              }
              counter += 1
              sender.isUserInteractionEnabled = false
