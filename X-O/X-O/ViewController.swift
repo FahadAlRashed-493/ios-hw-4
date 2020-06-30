@@ -59,19 +59,21 @@ class ViewController: UIViewController {
     
     @IBAction func press(_ sender: UIButton) {
        if counter % 2 == 0 {
-             sender.setTitle("🐬", for: .normal)
-                 turnLabel.text = "🐬 TURN"
+             sender.setTitle("X", for: .normal)
+        sender.setTitleColor(.green, for: .normal)
+                 turnLabel.text = "X TURN"
              }
              else {
-                 sender.setTitle("🦈", for: .normal)
-                 turnLabel.text = "🦈 TURN"
+                 sender.setTitle("O", for: .normal)
+        sender.setTitleColor(.red, for: .normal)
+                 turnLabel.text = "OTURN"
              }
              counter += 1
              sender.isUserInteractionEnabled = false
-           if checkWinner(p: "🐬") {
-               okAlert(title: "🐬 won the game", message: "Now please rest the game!")
-           } else if checkWinner(p: "🦈") {
-               okAlert(title: "🦈 won the game", message: "Now please reset the game!")
+           if checkWinner(p: "X") {
+               okAlert(title: "X won the game", message: "Now please rest the game!")
+           } else if checkWinner(p: "O") {
+               okAlert(title: "O won the game", message: "Now please reset the game!")
            } else if counter == 9 {
                okAlert(title: "No one wins", message: "Please reset the game.")
            }
@@ -142,7 +144,7 @@ class ViewController: UIViewController {
            b9.isUserInteractionEnabled = true
            
            counter = 0
-           turnLabel.text = "click the box to start"
+           turnLabel.text = "X Turn"
         
     }
     
